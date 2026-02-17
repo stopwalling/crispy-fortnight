@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,9 +231,10 @@
         }
 
         .products-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
-            gap:3rem;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+         gap: 3rem;
+         margin-bottom: 4rem; /* This creates the space – tweak to 3rem if too much */
         }
         .product-card {
             background:rgba(255,255,255,0.05);
@@ -543,8 +545,8 @@
                         <span class="feature-tag">ESP</span>
                         <span class="feature-tag">Undetected</span>
                     </div>
-                    <button data-brickpay-shop="walling" data-brickpay-product="29" class="buy-button">
-                        Buy Now
+                    <button data-brickpay-shop="walling" data-brickpay-product="39" class="buy-button">
+                        Buy Apex Internal 1 Day Key - $7.00
                     </button>
                 </div>
             </div>
@@ -552,7 +554,7 @@
             <div class="product-card reveal-on-scroll delay-2">
                 <div class="product-header">
                     <span>🎯</span>
-                    <div class="product-badge">1 Week Key</div>
+                    <div class="product-badge">7 Day Key</div>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Apex Legends Internal</h3>
@@ -563,8 +565,8 @@
                         <span class="feature-tag">ESP</span>
                         <span class="feature-tag">Undetected</span>
                     </div>
-                    <button data-brickpay-shop="walling" data-brickpay-product="31" class="buy-button">
-                        Buy Now
+                    <button data-brickpay-shop="walling" data-brickpay-product="40" class="buy-button">
+                        Buy Apex Internal 7 Day Key - $24.00
                     </button>
                 </div>
             </div>
@@ -572,11 +574,11 @@
             <div class="product-card reveal-on-scroll delay-3">
                 <div class="product-header">
                     <span>🔥</span>
-                    <div class="product-badge">1 Month Key</div>
+                    <div class="product-badge">30 Day Key</div>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Apex Legends Internal</h3>
-                    <div class="product-price">$40.00</div>
+                    <div class="product-price">$42.00</div>
                     <p class="product-desc">internal cheat for Apex Legends – humanized aimbot, basic ESP, undetected. Instant key & access after purchase.</p>
                     <div class="product-features">
                         <span class="feature-tag">Aimbot</span>
@@ -584,8 +586,8 @@
                         <span class="feature-tag">Undetected</span>
                         <span class="feature-tag">Hit That Pred!</span>
                     </div>
-                    <button data-brickpay-shop="walling" data-brickpay-product="32" class="buy-button">
-                        Buy Now
+                    <button data-brickpay-shop="walling" data-brickpay-product="41" class="buy-button">
+                        Buy Apex Internal 30 Day Key - $42.00
                     </button>
                 </div>
             </div>
@@ -742,6 +744,15 @@
 
         // Initial show
         showSlide(slideIndex);
+
+        // BrickPay JavaScript API Integration
+        // Listen for successful payment
+        window.addEventListener('brickpay:success', (e) => {
+            console.log('Payment complete!', e.detail);
+            // Optional: Add custom logic here, e.g., redirect to a success page or show a message
+            alert('Purchase successful! Check your email for the key.');
+        });
     </script>
 </body>
 </html>
+```
